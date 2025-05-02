@@ -32,6 +32,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
+
     - name: running checnIn
       run: |
         python checkin.py
@@ -39,8 +40,9 @@ jobs:
         PUSHPLUS: ${{ secrets.PUSHPLUS }}
         COOKIES: ${{ secrets.COOKIES }}
 
-    - name: keep alive
-      uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
+    - name: Keepalive Ping
+      run: echo "Keepalive ping at $(date)"
+
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
