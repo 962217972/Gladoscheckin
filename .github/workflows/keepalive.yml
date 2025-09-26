@@ -1,0 +1,13 @@
+name: Keep GitHub Actions Alive
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'   # 每周日 0点触发
+  workflow_dispatch:       # 允许手动运行，方便调试
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep alive
+        run: echo "This workflow keeps GitHub Actions active."
