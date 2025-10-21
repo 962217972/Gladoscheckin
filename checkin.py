@@ -47,7 +47,7 @@ if __name__ == '__main__':
             # 获取剩余时间
             leftdays = 0
             # 获取账号email
-            email = result['data']['email']
+            email = "yry"
 
             if status == "Checkin! Get 1 Day":
                 success += 1
@@ -83,4 +83,5 @@ if __name__ == '__main__':
         plusurl = f"http://www.pushplus.plus/send?token={sckey}&title={title}&content={sendContent}"
         r = requests.get(plusurl)
         print(r.status_code)
+
 
